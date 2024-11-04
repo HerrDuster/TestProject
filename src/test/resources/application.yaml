@@ -1,0 +1,14 @@
+com:
+  baidak:
+    test-comparus:
+      data-source-definitions:
+        - name: data-base-1
+          url: "jdbc:postgresql:TestDB1"
+          table: users
+          user: "test_user_1"
+          password: "Test1"
+          mapping:
+            id: user_id
+            username: login
+            name: first_name
+            surname: last_name

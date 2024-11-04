@@ -1,0 +1,52 @@
+#Logging conf
+logging:
+  config: logback.xml
+  level:
+    com:
+        test_comparus: DEBUG
+
+#OpenAPI conf
+springdoc:
+  swagger-ui:
+    path: "/swagger-ui.html"
+
+#Custom DB properties
+spring:
+  jpa:
+    hibernate:
+      ddl-auto=none:
+
+com:
+  baidak:
+    test-comparus:
+      data-source-definitions:
+        - name: data-base-1
+          url: "jdbc:postgresql:TestDB1"
+          table: users
+          user: "test_user_1"
+          password: "Test1"
+          mapping:
+            id: user_id
+            username: login
+            name: first_name
+            surname: last_name
+        - name: data-base-2
+          url: "jdbc:postgresql:TestDB2"
+          table: users
+          user: "test_user_2"
+          password: "Test2"
+          mapping:
+            id: user_id
+            username: login
+            name: first_name
+            surname: last_name
+        - name: data-base-3
+          url: "jdbc:postgresql:TestDB3"
+          table: users
+          user: "test_user_3"
+          password: "Test3"
+          mapping:
+            id: user_id
+            username: login
+            name: first_name
+            surname: last_name
